@@ -63,6 +63,7 @@ var options = {
         } else {
             //callback(body,null);
             console.log(JSON.parse(response.body));
+            console.log("--------------");
         }
         //console.log(JSON.stringify(body));
         //console.log(JSON.parse(body));
