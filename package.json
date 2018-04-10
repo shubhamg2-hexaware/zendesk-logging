@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^5.0.1",
+    "mysql": "^2.15.0",
     "node-zendesk": "^1.2.1"
   }
 }

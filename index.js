@@ -1,5 +1,6 @@
 var zendesk = require('node-zendesk');
 var exampleConfig = require('./config');
+var db = require('./api/db/mysql.js');
 //var fs = require('fs');
 //var zd = require('../lib/client');
 
@@ -15,13 +16,19 @@ function listTickets() {
             console.log(err);
             return;
         }
+
         body.forEach(function(element) {
-            console.log(element.id);
-            console.log(element.via.channel);
-            console.log(element.priority);
-            console.log(element.status);
+            var data = {
+                ticket_id: element.id,
+                via_channel: element.via.channel,
+                priority: element.priority,
+                status: element.status
+            }
+            var response = db.insertRecord(data, function(response) {
+            });
         })
     })
+    setTimeout(listTickets, 60000);
 }
 
 listTickets();
