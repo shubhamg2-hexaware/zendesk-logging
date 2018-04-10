@@ -28,10 +28,12 @@ function listTickets() {
                 status: element.status
             }
             var response = db.insertRecord(data, function(response) {
+                console.log(response);
             });
         })
     })
     setTimeout(listTickets, 60000);
+    console.log("called");
 }
 
 listTickets();
