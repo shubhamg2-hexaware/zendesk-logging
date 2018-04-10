@@ -5,7 +5,7 @@ module.exports = {
 
     var options = { 
         method: 'GET',
-        url: 'https://humanbot.zendesk.com/api/v2/tickets/63/comments.json',
+        url: `https://humanbot.zendesk.com/api/v2/tickets/${ticketNumber}/comments.json`,
         headers: { 
             'Content-Type': 'application/json',
         },
