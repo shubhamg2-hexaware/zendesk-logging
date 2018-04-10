@@ -55,5 +55,17 @@ module.exports = {
             return callback(response);
         
         });
+    },
+    "insertChat" : function (data, callback) {
+        connection.query('insert into chat_log set ?', data, function(err, rows, fields) {
+            if (err) {
+                var response = processor.dbErrorResponse();
+                return callback(response);
+            }
+            var message = "chats are inserted.";
+            var response = processor.getResponse(rows, message);
+            return callback(response);
+        
+        });
     }
 }

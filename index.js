@@ -29,7 +29,13 @@ function listTickets() {
                 })();
                 var comment = JSON.parse(commentResponse);
                 comment.comments.forEach(function(element2){
-                    console.log(element2.plain_body);
+                    var chatData = {
+                        id:element.id,
+                        chats:element2.plain_body,
+                        created_at:element2.created_at
+                    }
+                    db.insertChat(chatData, function(response) {
+                    })
                 });
                 var data = {
                     ticket_id: element.id,
