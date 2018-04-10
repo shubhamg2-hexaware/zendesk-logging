@@ -20,7 +20,7 @@ function listTickets() {
             return;
         }
 
-        ticket.tickets.forEach(function(element) {
+        body.forEach(function(element) {
             var data = {
                 ticket_id: element.id,
                 via_channel: element.via.channel,
