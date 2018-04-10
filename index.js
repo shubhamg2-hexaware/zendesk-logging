@@ -27,10 +27,10 @@ function listTickets() {
                 let commentResponse = deasync(function(callback) {
                     chatComments.getComments(element.id, callback);
                 })();
-                
-                commentResponse.comments.forEach(function(element2){
-                    console.log(element2.plain_body);
-                });
+                console.log(commentResponse);
+                // commentResponse.comments.forEach(function(element2){
+                //     console.log(element2.plain_body);
+                // });
                 var data = {
                     ticket_id: element.id,
                     via_channel: element.via.channel,
