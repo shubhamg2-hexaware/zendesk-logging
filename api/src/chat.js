@@ -19,6 +19,7 @@ module.exports = {
         if (error) {
             console.log(error);
         } else {
+            console.log(body);
             callback(null, response.body);
         }
     });
