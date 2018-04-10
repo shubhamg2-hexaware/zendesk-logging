@@ -25,7 +25,8 @@ function listTickets() {
                 ticket_id: element.id,
                 via_channel: element.via.channel,
                 priority: element.priority,
-                status: element.status
+                status: element.status,
+                creation_time: element.created_at
             }
             var response = db.insertRecord(data, function(response) {
             });
