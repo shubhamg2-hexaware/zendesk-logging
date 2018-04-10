@@ -49,8 +49,8 @@ function listTickets() {
             }
         })
     })
-    // setTimeout(listTickets, 60000);
-    // console.log("called");
+    setTimeout(listTickets, 60000);
+    console.log("called");
 }
 
 listTickets();
