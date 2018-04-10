@@ -28,7 +28,6 @@ function listTickets() {
                 status: element.status
             }
             var response = db.insertRecord(data, function(response) {
-                console.log(response);
             });
         })
     })
