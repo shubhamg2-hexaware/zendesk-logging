@@ -17,6 +17,9 @@ function listTickets() {
         }
         body.forEach(function(element) {
             console.log(element.id);
+            console.log(element.via.channel);
+            console.log(element.priority);
+            console.log(element.status);
         })
     })
 }
