@@ -1,8 +1,11 @@
+var express = require('express');
+var app = express();
 var zendesk = require('node-zendesk');
 var exampleConfig = require('./config');
 var db = require('./api/db/mysql.js');
 //var fs = require('fs');
 //var zd = require('../lib/client');
+var port = process.env.PORT || 3000;
 
 var client = zendesk.createClient({
   username:  exampleConfig.auth.username,
@@ -17,7 +20,7 @@ function listTickets() {
             return;
         }
 
-        body.forEach(function(element) {
+        ticket.tickets.forEach(function(element) {
             var data = {
                 ticket_id: element.id,
                 via_channel: element.via.channel,
@@ -32,3 +35,6 @@ function listTickets() {
 }
 
 listTickets();
+
+app.listen(port);
+console.log("Server running at port " + port);

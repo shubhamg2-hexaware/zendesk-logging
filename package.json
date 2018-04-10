@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^5.0.1",
+    "express": "^4.16.3",
     "mysql": "^2.15.0",
     "node-zendesk": "^1.2.1"
   }
