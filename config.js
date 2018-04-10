@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 exports.auth = {
-  username: process.env.ZENDESK_USER_NAME,
-  token: process.env.ZENDESK_TOKEN,
-  remoteUri: process.env.ZENDESK_REMOTE_URI
+  username: 'wrestlingmania9@gmail.com',
+  token: 'CIRIKdRSPw51G9ugyrAzzKDTwJbc7iLdFrnix1ay',
+  remoteUri: 'https://humanbot.zendesk.com/api/v2'
 };
