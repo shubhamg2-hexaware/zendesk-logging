@@ -30,7 +30,7 @@ function handleDisconnect() {
 
 connection.connect(function(err) {
   if (err) {
-    logger.error("CONNECTION ERROR", err);
+    //logger.error("CONNECTION ERROR", err);
     setTimeout(handleDisconnect, 2000);
   } else {
     console.log('You are now connected...');
@@ -38,7 +38,7 @@ connection.connect(function(err) {
 })//Database connection.
 
 connection.on('error', function(err) {
-  logger.error("DB ERROR, connection lost", err);
+  //logger.error("DB ERROR, connection lost", err);
   console.log(err.code);// 'ER_BAD_DB_ERROR'
   setTimeout(handleDisconnect, 1000)
 });//Method which won't allow to close node server even after MySQL server disconnects.
