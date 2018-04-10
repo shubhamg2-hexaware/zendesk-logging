@@ -27,8 +27,8 @@ function listTickets() {
                 let commentResponse = deasync(function(callback) {
                     chatComments.getComments(element.id, callback);
                 })();
-                console.log(JSON.parse(commentResponse));
-                commentResponse.comments.forEach(function(element2){
+                var comment = JSON.parse(commentResponse);
+                comment.comments.forEach(function(element2){
                     console.log(element2.plain_body);
                 });
                 var data = {
