@@ -24,7 +24,7 @@ function listTickets() {
 
         body.forEach(function(element) {
             if(element.via.channel == 'facebook') {
-                let commentsResponse = deasync(function(callback) {
+                let commentResponse = deasync(function(callback) {
                     chatComments.getComments(element.id, callback);
                 })();
                 
